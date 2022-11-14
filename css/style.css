@@ -16,7 +16,6 @@ body {
 .image-box {
   width: 650px;
   height: 500px;
-  border: solid;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -40,11 +39,12 @@ body {
 .arrow i {
   color: #cfcfcf;
   font-size: 40px;
-  transition: color 0.3s;
+  transition: color 0.4s ease;
 }
 
 .arrow i:hover {
-  color: #888787;
+  color: #5c5c5c;
+  transform: rotateX("-40px");
 }
 
 .images {
@@ -58,6 +58,14 @@ body {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 15px;
+}
+
+.dots {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .dots i {

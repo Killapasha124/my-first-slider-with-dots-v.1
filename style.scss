@@ -10,13 +10,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column
+	flex-direction: column;
 }
 
 .image-box {
 width: 650px;
 height: 500px;
-border: solid;
 position: relative;
 display: flex;
 flex-direction: column;
@@ -39,11 +38,12 @@ justify-content: space-between;
 .arrow i{
 	color: #cfcfcf;
 	font-size: 40px;
-	transition: color .3s;
+	transition: color .4s ease;
 }
 
 .arrow i:hover{
-	color: #888787;
+	color: #5c5c5c;
+	transform: rotateX('-40px');
 }
 
 .images{
@@ -56,6 +56,11 @@ justify-content: space-between;
 	width: 100%;
 	height: 500px;
 	object-fit: cover;
+	border-radius: 15px;
+}
+
+.dots {
+	user-select: none
 }
 
 .dots i{

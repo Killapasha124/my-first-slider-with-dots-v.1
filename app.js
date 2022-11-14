@@ -1,19 +1,17 @@
 const images = document.querySelectorAll('.images');
-
-const arrowRight = document.getElementById('right')
-const arrowLeft = document.getElementById('left')
-const dots = document.getElementsByTagName('i')
-const dotsClick = document.querySelector('.dots')
-
-
-let active = 0
-let dotsCount = 2 
+const arrowRight = document.getElementById('right');
+const arrowLeft = document.getElementById('left');
+const dots = document.getElementsByTagName('i');
+const dotsClick = document.querySelector('.dots');
 
 
-arrowRight.addEventListener('click', nextSlide)
-arrowLeft.addEventListener('click', prevSlide)
+let active = 0;
+let dotsCount = 2 ;
+
+
+arrowRight.addEventListener('click', nextSlide);
+arrowLeft.addEventListener('click', prevSlide);
 dotsClick.addEventListener('click', (e) =>{
-
 if(e.target == dots[2]) {
 removeActive()
 	active = 0
@@ -34,11 +32,11 @@ removeActive()
 	dotsCount = 4
 addActive()
 }
-})
+});
 
 
 function prevSlide() {
-removeActive()
+removeActive();
 
 if(active == 0 || dotsCount == 2){
 	active = 2
@@ -49,12 +47,11 @@ else {
 	dotsCount--
 }
 
-addActive()
-
+addActive();
 };
 
 function nextSlide() {
-removeActive()
+removeActive();
 
 
 if(active + 1 === images.length || dotsCount + 1 === dots.length){
@@ -67,16 +64,16 @@ else {
 	
 }
 
-addActive()
+addActive();
 };
 
 function removeActive() {
 images[active].classList.remove('active')
 dots[dotsCount].classList.replace('fa-solid', 'fa-regular')
-}
+};
 
 function addActive() {
 images[active].classList.add('active')
 dots[dotsCount].classList.add('fa-solid')
-}
+};
 
